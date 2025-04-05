@@ -39,10 +39,10 @@ app.post('/api/verify', (req, res) => {
   const similarity = stringSimilarity.compareTwoStrings(originalClean, inputClean);
 
   const isCorrect = similarity >= 0.90;
-
+  
   res.json({ correct: isCorrect });
 });
 
 app.listen(port, () => {
-  console.log(`Server running on ${process.env.CURRENT_DOMAIN}:${port}`);
+  console.log(`Server running ${process.env.CURRENT_DOMAIN}:${port}`);
 });
