@@ -44,5 +44,5 @@ app.post('/api/verify', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on ${process.env.CURRENT_DOMAIN}:${port}`);
 });
