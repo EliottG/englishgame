@@ -6,7 +6,7 @@ dotenv.config();
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 const app = express();
-const port = 3001;
+const port = process.env.PORT;
 
 const pool = new Pool({
   user: process.env.USER,
