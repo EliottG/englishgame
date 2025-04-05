@@ -7,11 +7,10 @@ const app = express();
 const port = 3001;
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'english_app',
-  password: 'root',
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 app.use(cors());
