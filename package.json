@@ -8,6 +8,6 @@
     "string-similarity": "^4.0.4"
   },
   "scripts": {
-    "start": "npm install && node server.js"  
+    "start": "node server.js"
   }
 }
